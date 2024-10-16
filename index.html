@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chih Yu's GitHub Pages</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#1e1e2e">
+    <meta name="theme-color" content="#1e1e2e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    <style>
+        :root {
+            --base: #1e1e2e;
+            --surface0: #313244;
+            --surface1: #45475a;
+            --text: #cdd6f4;
+            --subtext0: #a6adc8;
+            --blue: #89b4fa;
+            --lavender: #b4befe;
+            --green: #a6e3a1;
+            --peach: #fab387;
+            --yellow: #f9e2af;
+            --flamingo: #f2cdcd;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--base);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            position: relative;
+            text-align: left;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 5px;
+            font-family: 'Space Mono', monospace;
+            overflow: hidden;
+        }
+
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('keyboards.png');
+            background-position: center 60%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            filter: brightness(0.7) contrast(1.2) saturate(0.8);
+            z-index: -1;
+        }
+
+        header h1 {
+            color: var(--green);
+            margin-bottom: 0.5rem;
+            text-align: left;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            color: var(--text);
+            margin-bottom: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid var(--lavender);
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-bottom: 4rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+                white-space: normal;
+                border-right: none;
+                animation: none;
+            }
+
+            .header-images {
+                flex-direction: column;
+            }
+
+            .header-images .image-container {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--lavender)
+            }
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--lavender);
+        }
+
+        h1 {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--surface1);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+
+        ul>li {
+            color: var(--peach);
+        }
+
+        ul>li>ul>li {
+            color: var(--yellow);
+        }
+
+        ul>li>ul>li>ul>li {
+            color: var(--flamingo);
+        }
+
+        li span {
+            color: var(--text);
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+            position: relative;
+            transition: font-weight 0.3s ease;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--blue);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        #my-tech-stack,
+        #tools-i-use {
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        #scroll-top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #232639;
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        #scroll-top-button.show {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        #scroll-top-button svg {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        #scroll-top-button:hover {
+            background-color: #2a2a3e;
+            box-shadow: 0 0 10px rgba(243, 187, 228, 0.5);
+        }
+
+        #scroll-top-button:hover svg {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            #my-tech-stack,
+            #tools-i-use {
+                flex: 1 1 100%;
+            }
+        }
+
+        .github-icon-header {
+            width: 32px;
+            height: 32px;
+            color: var(--green);
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .github-icon-header:hover {
+            transform: scale(1.2);
+        }
+
+        header h1 a::after {
+            content: none;
+        }
+
+        header h1 a {
+            transition: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-background"></div>
+        <h1>$ Chihyu <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <svg class="github-icon-header" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a></h1>
+        <p>Software Engineer | Cat Lover | Custom Keyboard Enthusiast</p>
+    </header>
+
+    <main>
+        <div class="flex-container">
+            <section id="my-tech-stack">
+                <h2>👩🏻‍💻 My Tech Stack</h2>
+                <h3 id="backend-development">Backend Development</h3>
+                <ul>
+                    <li><span>Programming Languages</span>
+                        <ul>
+                            <li>
+                                <span><a href="https://go.dev/" target="_blank">Go</a> (with <a href="https://gin-gonic.com/" target="_blank">Gin framework</a>)</span>
+                            </li>
+                            <li>
+                                <span><a href="https://www.php.net/" target="_blank">PHP</a> (with <a href="https://laravel.com/" target="_blank">Laravel framework</a>)</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span>Databases</span>
+                        <ul>
+                            <li><span><a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a></span></li>
+                            <li><span><a href="https://www.mysql.com/" target="_blank">MySQL</a></span></li>
+                            <li><span><a href="https://redis.io/" target="_blank">Redis</a></span></li>
+                        </ul>
+                    </li>
+                    <li><span>Other Technologies</span>
+                        <ul>
+                            <li><span><a href="https://k6.io/" target="_blank">Grafana k6</a></span></li>
+                            <li><span><a href="https://www.docker.com/" target="_blank">Docker</a></span></li>
+                            <li><span><a href="https://aws.amazon.com/" target="_blank">AWS Cloud Services</a></span>
+                                <ul>
+                                    <li><span><a href="https://aws.amazon.com/s3/" target="_blank">S3</a></span></li>
+                                    <li><span><a href="https://aws.amazon.com/cloudwatch/" target="_blank">CloudWatch</a></span></li>
+                                    <li><span><a href="https://aws.amazon.com/sns/" target="_blank">SNS</a></span></li>
+                                    <li><span><a href="https://aws.amazon.com/sqs/" target="_blank">SQS</a></span></li>
+                                    <li><span><a href="https://aws.amazon.com/ec2/" target="_blank">EC2</a></span></li>
+                                    <li><span><a href="https://aws.amazon.com/lambda/" target="_blank">Lambda</a></span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="mobile-development">Mobile Development</h3>
+                <ul>
+                    <li><span>Programming Languages</span>
+                        <ul>
+                            <li>
+                                <span><a href="https://developer.apple.com/swift/" target="_blank">Swift</a> (with <a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI framework</a>)</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="tools-i-use">
+                <h2>🛠️ Tools I Use</h2>
+
+                <h3 id="theme">Theme</h3>
+                <ul>
+                    <li><span>Color Scheme</span>
+                        <ul>
+                            <li><span><a href="https://github.com/catppuccin/catppuccin" target="_blank">Catppuccin</a></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="development-tools">Development Tools</h3>
+                <ul>
+                    <li><span>Backend Development</span>
+                        <ul>
+                            <li><span><a href="https://www.jetbrains.com/go/" target="_blank">GoLand</a></span></li>
+                            <li><span><a href="https://www.jetbrains.com/phpstorm/" target="_blank">PHPStorm</a></span></li>
+                        </ul>
+                    </li>
+                    <li><span>Mobile Development</span>
+                        <ul>
+                            <li><span><a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a></span></li>
+                        </ul>
+                    </li>
+                    <li><span>Terminal</span>
+                        <ul>
+                            <li><span><a href="https://www.warp.dev/" target="_blank">Warp</a></span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="productivity">Productivity</h3>
+                <ul>
+                    <li><span>Utilities</span>
+                        <ul>
+                            <li><span><a href="https://www.raycast.com/" target="_blank">Raycast</a></span></li>
+                        </ul>
+                    </li>
+                    <li><span>Note-Taking</span>
+                        <ul>
+                            <li><span><a href="https://obsidian.md/" target="_blank">Obsidian</a></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <button id="scroll-top-button">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="700 250 520 520">
+            <defs>
+                <clipPath id="circle-clip">
+                    <circle cx="960" cy="510" r="260" />
+                </clipPath>
+            </defs>
+            <g clip-path="url(#circle-clip)">
+                <path d="M0 0 C633.6 0 1267.2 0 1920 0 C1920 356.4 1920 712.8 1920 1080 C1286.4 1080 652.8 1080 0 1080 C0 723.6 0 367.2 0 0 Z " fill="#232639" transform="translate(0,0)" />
+                <path d="M0 0 C10.19991408 7.65368002 18.40448235 18.30050294 21 31 C22.44870691 45.31623098 20.88768812 59.25622606 12 71 C3.56770701 80.99549882 -6.44080547 87.44156155 -19 91 C-18.01773437 91.23783203 -18.01773437 91.23783203 -17.015625 91.48046875 C-1.33734487 95.48861664 13.08590009 101.46587942 21.6953125 115.828125 C28.97255465 129.53887108 30.34473199 145.40214008 26.375 160.4375 C22.7126669 171.50106376 17.19031973 179.76724338 9 188 C8.40832031 188.62648438 7.81664062 189.25296875 7.20703125 189.8984375 C-8.39532256 205.1219262 -32.37652163 209.38419127 -53.22021484 209.30029297 C-78.53689572 208.84506025 -101.26318682 200.19505093 -119.6484375 182.63671875 C-122 180 -122 180 -122 177 C-120.04944471 174.9661893 -118.10666933 173.10887679 -116 171.25 C-115.40711182 170.71793945 -114.81422363 170.18587891 -114.20336914 169.63769531 C-113.01762235 168.575447 -111.82894125 167.51646414 -110.63720703 166.4609375 C-109.2385685 165.21288308 -107.86462496 163.93724645 -106.49609375 162.65625 C-105.81675781 162.0271875 -105.13742187 161.398125 -104.4375 160.75 C-103.56931641 159.93789063 -103.56931641 159.93789063 -102.68359375 159.109375 C-101 158 -101 158 -97 158 C-95.5 159.28515625 -95.5 159.28515625 -94 161.0625 C-84.07603519 171.44902249 -70.27595758 175.91185346 -56.19165039 176.47045898 C-44.0030903 176.62588271 -32.42882602 174.20584022 -23 166 C-20.92336918 163.8294512 -19.40774796 161.64987851 -18 159 C-17.68160156 158.401875 -17.36320312 157.80375 -17.03515625 157.1875 C-13.11771904 147.94451451 -13.55272157 135.07909229 -16.6875 125.6875 C-18.48571129 121.58356831 -20.40707969 118.77634751 -24 116 C-24.55300781 115.57203125 -25.10601563 115.1440625 -25.67578125 114.703125 C-35.28042232 107.94209402 -46.88429812 107.52846068 -58.25 107.3125 C-59.48363281 107.27833984 -60.71726562 107.24417969 -61.98828125 107.20898438 C-64.99209638 107.12748552 -67.99565555 107.05802244 -71 107 C-71.24856408 100.41305198 -70.31547023 94.44402648 -69 88 C-68.80921875 87.03449219 -68.6184375 86.06898438 -68.421875 85.07421875 C-67.95464658 82.71471522 -67.48056564 80.35681661 -67 78 C-66.4016333 77.99589111 -65.8032666 77.99178223 -65.18676758 77.98754883 C-46.47929289 78.00390977 -46.47929289 78.00390977 -29.7890625 70.3359375 C-28 69 -28 69 -26 69 C-25.56977539 68.12311523 -25.56977539 68.12311523 -25.13085938 67.22851562 C-24.4387915 65.86469965 -23.71724562 64.51475362 -22.94726562 63.19335938 C-19.96409824 57.8930601 -19.38397186 53.52379412 -19.5 47.5 C-19.48453125 46.69691406 -19.4690625 45.89382813 -19.453125 45.06640625 C-19.4976121 38.20427106 -21.42550076 33.12537462 -25.7890625 27.828125 C-26.39492187 27.30734375 -27.00078125 26.7865625 -27.625 26.25 C-28.21539063 25.71890625 -28.80578125 25.1878125 -29.4140625 24.640625 C-37.07572572 19.77975105 -44.32711861 18.29978436 -53.3125 18.4375 C-54.3221582 18.44773193 -55.33181641 18.45796387 -56.37207031 18.46850586 C-71.55504804 18.89920267 -83.79131413 26.00306396 -95 36 C-98.20346883 34.60181062 -100.20931041 32.97704427 -102.56640625 30.41015625 C-103.21673828 29.70826172 -103.86707031 29.00636719 -104.53710938 28.28320312 C-105.53967773 27.18395508 -105.53967773 27.18395508 -106.5625 26.0625 C-107.89682312 24.61559736 -109.23144729 23.16897227 -110.56640625 21.72265625 C-111.15365479 21.08078369 -111.74090332 20.43891113 -112.34594727 19.77758789 C-113.43037699 18.61216607 -114.55331517 17.48119316 -115.71459961 16.39233398 C-117 15 -117 15 -117 13 C-84.76467169 -14.53346045 -37.30477544 -24.33402142 0 0 Z " fill="#F3BBE4" transform="translate(1070,402)" />
+                <path d="M0 0 C7.12085848 3.92271853 13.17957651 9.87150891 16.4453125 17.359375 C18.57592669 25.17872907 18.54444352 33.41107007 15.0390625 40.7890625 C14.13988421 42.29183284 13.20553498 43.77451114 12.2265625 45.2265625 C11.205625 46.8353125 11.205625 46.8353125 10.1640625 48.4765625 C5.26689047 53.78309566 -1.49819963 56.747508 -8.5390625 57.77734375 C-18.35244482 58.12498381 -25.24444331 56.16481831 -32.6484375 49.7265625 C-33.3496875 48.9015625 -34.0509375 48.0765625 -34.7734375 47.2265625 C-35.4746875 46.4634375 -36.1759375 45.7003125 -36.8984375 44.9140625 C-42.25335742 37.23867728 -42.85559746 29.38885014 -41.7734375 20.2265625 C-39.42776139 12.54317009 -34.54358527 6.10797773 -27.65234375 -3.1171875 C-18.99540297 -6.0232901 -9.26014278 -3.60303737 0 0 Z " fill="#F3BBE4" transform="translate(857.7734375,528.7734375)" />
+                <path d="M0 0 C6.26541118 3.75924671 10.79607247 11.10514416 13 18 C14.00864606 27.29016106 13.52848081 35.18439425 8 43 C5.5 45.875 5.5 45.875 3 48 C1.8553125 49.051875 1.8553125 49.051875 0.6875 50.125 C-6.98788522 55.47991992 -14.83771236 56.08215996 -24 55 C-31.68339241 52.65432389 -38.11858477 47.77014777 -42.28125 40.87890625 C-46.44837361 32.7678978 -47.80835269 24.01703002 -45.12890625 15.1015625 C-41.19393926 6.71556727 -35.22775725 0.74464369 -26.80078125 -3.1171875 C-17.58094844 -6.02329937 -8.50286686 -4.14316263 0 0 Z " fill="#F3BBE4" transform="translate(862,423)" />
+            </g>
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollTopButton = document.getElementById('scroll-top-button')
+
+            scrollTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            })
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.classList.add('show')
+                } else {
+                    scrollTopButton.classList.remove('show')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
