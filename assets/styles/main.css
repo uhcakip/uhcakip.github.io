@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Mulish', sans-serif;
     background-color: var(--base);
     color: var(--text);
     line-height: 1.6;
@@ -28,7 +28,7 @@ header {
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 5px;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Anonymous Pro', monospace;
     overflow: hidden;
 }
 
@@ -51,7 +51,7 @@ header h1 {
     color: var(--green);
     margin-bottom: 0.5rem;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 header p {
@@ -61,7 +61,7 @@ header p {
     white-space: nowrap;
     border-right: 0.15em solid var(--lavender);
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 footer {
@@ -77,11 +77,11 @@ footer {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         white-space: normal;
         border-right: none;
         animation: none;
@@ -103,11 +103,11 @@ footer {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     header p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
