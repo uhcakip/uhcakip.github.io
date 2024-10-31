@@ -140,9 +140,14 @@ header {
     background-position: center 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0;
     filter: brightness(0.7) contrast(1.2) saturate(0.8);
     z-index: -1;
+    transition: opacity 0.5s ease-in;
+}
+
+#content.visible .header-background {
+    opacity: 0.15;
 }
 
 header h1 {
