@@ -399,55 +399,6 @@ header h1 a {
     transition: none;
 }
 
-.status-indicator {
-    background: var(--surface0);
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    border: 1px solid var(--surface1);
-}
-
-.status-light {
-    min-width: 12px;
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-    background: var(--green);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-.status-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.status-content h4 {
-    color: var(--text);
-    font-size: 0.95rem;
-    margin: 0 0 1rem 0;
-    font-weight: normal;
-}
-
-.status-badge {
-    display: none;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(166, 227, 161, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(166, 227, 161, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(166, 227, 161, 0);
-    }
-}
-
 @media (max-width: 768px) {
     .cat-loader-container {
         width: 280px;
