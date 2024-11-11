@@ -91,8 +91,12 @@
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes pulse-ring {
@@ -275,15 +279,15 @@ li {
     margin-bottom: 0.25rem;
 }
 
-ul>li {
+ul > li {
     color: var(--peach);
 }
 
-ul>li>ul>li {
+ul > li > ul > li {
     color: var(--yellow);
 }
 
-ul>li>ul>li>ul>li {
+ul > li > ul > li > ul > li {
     color: var(--flamingo);
 }
 
@@ -409,6 +413,15 @@ header h1 a {
         font-size: 10px;
         transform: scale(0.7);
     }
+
+    .github-icon-header {
+        width: 28px;
+        height: 28px;
+    }
+
+    .github-icon-header:hover {
+        transform: scale(1.15);
+    }
 }
 
 @media (max-width: 480px) {
@@ -420,5 +433,14 @@ header h1 a {
     .loading-text {
         font-size: 8px;
         transform: scale(0.6);
+    }
+
+    .github-icon-header {
+        width: 24px;
+        height: 24px;
+    }
+
+    .github-icon-header:hover {
+        transform: scale(1.1);
     }
 }
