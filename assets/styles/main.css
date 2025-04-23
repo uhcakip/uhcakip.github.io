@@ -229,7 +229,6 @@ footer {
 }
 
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent
