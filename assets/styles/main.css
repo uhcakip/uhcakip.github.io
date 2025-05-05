@@ -13,6 +13,19 @@
     --mauve: #cba6f7;
 }
 
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    overflow-y: auto;
+}
+
 #loader {
     position: fixed;
     top: 0;
