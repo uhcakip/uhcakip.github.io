@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const loader = document.getElementById('loader')
-  const content = document.getElementById('content')
   const backgroundImage = new Image()
   backgroundImage.src = 'assets/images/keyboards.png'
   backgroundImage.onload = () => {
+    // Set background image for header
+    const headerBackground = document.querySelector('.header-background')
+    if (headerBackground) {
+      headerBackground.style.backgroundImage = `url('${backgroundImage.src}')`
+    }
+
+    const loader = document.getElementById('loader')
+    const content = document.getElementById('content')
     setTimeout(() => {
       loader.style.opacity = '0'
       content.style.display = 'block'

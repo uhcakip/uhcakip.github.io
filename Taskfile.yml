@@ -1,0 +1,12 @@
+version: '3'
+
+vars:
+  BUN_BIN:
+    sh: which bun
+
+tasks:
+  build:
+    desc: ...
+    cmds:
+      - '{{ .BUN_BIN }} build --minify src/main.css --outdir=assets --outfile=main.css'
+      - '{{ .BUN_BIN }} build --minify src/main.js --outdir=assets --outfile=main.js'
